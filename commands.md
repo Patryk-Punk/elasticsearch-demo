@@ -16,6 +16,9 @@ curl -X POST "localhost:9200/bank/_doc/?pretty" -H 'Content-Type: application/js
 }'
 ```
 
+<br/>
+<br/>
+
 ## UPLOAD BULK DOCS WITH PRETTY FORMAT
 ```curl -H "Content-Type: application/json" -XPOST "localhost:9200/bank/_bulk?pretty&refresh" --data-binary "@accounts.json"```
 
@@ -24,6 +27,9 @@ curl -X POST "localhost:9200/bank/_doc/?pretty" -H 'Content-Type: application/js
 
 refresh tells all shards that are affected to refresh and make data available for search.
 data-binary flag used for when you're bulk uploading text
+
+<br/>
+<br/>
 
 ## MAPPINGS FOR BANK INDEX
 ```
@@ -68,15 +74,23 @@ curl -X PUT "localhost:9200/bank/_doc/1?pretty" -H 'Content-Type: application/js
   }  
 }'
 ```
+<br/>
+<br/>
 
 ## Fetch Data
 
 ```curl -X GET "localhost:9200/bank/_doc/0?pretty"```
 
+<br/>
+<br/>
+
 ## Search Data
 
 ### Search by query params (NOT RECOMMENDED)
 ```curl -X GET "localhost:9200/bank/_search?pretty&q=Holt"```
+
+<br/>
+<br/>
 
 ### Search by body
 ```
@@ -91,6 +105,7 @@ curl -X GET "localhost:9200/bank/_search?pretty" -H 'Content-Type: application/j
 '
 ```
 You can specify whether is whether the operation done for the above command is AND or OR by the following:
+#### TODO:
 ```
 "query": {
   ...
@@ -100,6 +115,9 @@ You can specify whether is whether the operation done for the above command is A
   }
 }
 ```
+
+<br/>
+<br/>
 
 ### Search by phrase prefixing
 ```
