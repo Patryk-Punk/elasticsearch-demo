@@ -1,4 +1,9 @@
 # ElasticSearch Using cURL
+Hello, this is a simple Elasticsearch cluster project for playing around with that I'll keep up to date with the latest version of Elasticsearch and Kibana. I have included a json file with some account data for a simple bank account and below are a list of simple commands to get you started.
+
+Please let me know if there's something you think would be neat you want included.
+
+<b>CURRENT VERSION 7.10</b>
 
 ## UPLOAD ONE DOC
 ```
