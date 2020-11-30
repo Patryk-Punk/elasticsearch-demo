@@ -107,15 +107,19 @@ curl -X GET "localhost:9200/bank/_search?pretty" -H 'Content-Type: application/j
 '
 ```
 You can specify whether is whether the operation done for the above command is AND or OR by the following:
-#### TODO:
 ```
-"query": {
-  ...
-  "match": {
-    ...
-    "operator: "and"
+curl -X GET "localhost:9200/bank/_search?pretty" -H 'Content-Type: application/json' -d'
+{
+  "query": {
+    "match": {
+      "address": {
+        "query": "State Street",
+        "operator": "AND"
+      }
+    }
   }
 }
+'
 ```
 
 <br/>
