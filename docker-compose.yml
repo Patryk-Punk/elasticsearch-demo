@@ -16,6 +16,8 @@ services:
         hard: -1
     volumes:
       - data01:/elastic-data
+      - ./elasticsearch-backup:/usr/share/elasticsearch/backup
+      - ./elasticsearch/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml
     ports:
       - 9200:9200
     networks:
@@ -36,6 +38,8 @@ services:
         hard: -1
     volumes:
       - data02:/elastic-data
+      - ./elasticsearch-backup:/usr/share/elasticsearch/backup
+      - ./elasticsearch/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml
     networks:
       - elastic
   es03:
@@ -54,6 +58,8 @@ services:
         hard: -1
     volumes:
       - data03:/elastic-data
+      - ./elasticsearch-backup:/usr/share/elasticsearch/backup
+      - ./elasticsearch/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml
     networks:
       - elastic
   kib01:
@@ -73,6 +79,8 @@ volumes:
   data02:
     driver: local
   data03:
+    driver: local
+  elasticsearch-backup:
     driver: local
 
 networks:
